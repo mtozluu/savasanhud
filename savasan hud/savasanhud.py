@@ -19,13 +19,13 @@ while True:
     cv2.rectangle(goruntu,(x,y),( x + gen , y+uz),(204,0,102),4)
     
     # Hedef vuruş alanı yazısı oluşturulması
-    cv2.putText(goruntu,"Av: Hedef Vurus Alani",(162,427),1,1,(0,0,0),1)
+    cv2.putText(goruntu,"Av: Hedef Vurus Alani",(int(goruntu.shape[1]/4),int(goruntu.shape[0]*9/10)),1,1,(0,0,0),1)
     
     # Kamera görüş alanı dikdörtgeni oluşturulması
     cv2.rectangle(goruntu,(0,0),(int(goruntu.shape[1]),int(goruntu.shape[0])),(0,153,0),4)
 
     # Kamera görüş alanı yazısı oluşturulması
-    cv2.putText(goruntu,"Ak: Kamera Gorus Alani",(2,475),1,1,(0,0,0),1)
+    cv2.putText(goruntu,"Ak: Kamera Gorus Alani",(0,(int(goruntu.shape[0])-2)),1,1,(0,0,0),1)
     
     # Oluşturulan görüntünün gösterilmesi
     cv2.imshow("kamera",goruntu)
